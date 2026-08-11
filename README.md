@@ -5,14 +5,15 @@ Full configuration for this setup can be found [here](https://github.com/woomiz/
 
 Three documents are built from the same components:
 
-| Document | Source | Experience | Skills | Education | Pages |
-| --- | --- | --- | --- | --- | --- |
-| Resume (elaborate) | `resume.tex` | `experiance.tex` | `skills.tex` | `education.tex` | 2 |
-| Resume (condensed) | `resume-condensed.tex` | `experiance-condensed.tex` | `skills-condensed.tex` | `education-condensed.tex` | 1 |
-| CV | `cv.tex` | `experiance.tex` + projects | `skills.tex` | `education.tex` | 2 |
+| Document | Source | Summary | Experience | Skills | Education | Pages |
+| --- | --- | --- | --- | --- | --- | --- |
+| Resume (elaborate) | `resume.tex` | `summary.tex` | `experiance.tex` | `skills.tex` | `education.tex` | 2 |
+| Resume (condensed) | `resume-condensed.tex` | `summary.tex` | `experiance-condensed.tex` | `skills-condensed.tex` | `education-condensed.tex` | 1 |
+| CV | `cv.tex` | `summary.tex` | `experiance.tex` + projects | `skills.tex` | `education.tex` | 2 |
 
-Section order in every document is Experience → (Projects) → Technical Skills → Education.
+Section order in every document is Summary → Experience → (Projects) → Technical Skills → Education.
 The condensed education file drops the high school entry; the full one keeps it.
+All three documents share one `summary.tex`, capped at three rendered lines.
 
 All components live in `components/`. When a role or skill changes, update **both**
 the full and the `-condensed` file so the variants stay in sync. The condensed
